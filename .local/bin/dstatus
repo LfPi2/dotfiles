@@ -1,0 +1,14 @@
+#!/bin/sh
+
+while true
+do
+	user=$(whoami)
+	host=$(cat /etc/hostname)
+	date=$(date +"%H:%M:%S %d/%m/%Y")
+
+	status="[$user@$host] [$date]"
+
+	xsetroot -name "$status"
+
+	sleep 1
+done

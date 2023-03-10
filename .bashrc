@@ -5,9 +5,11 @@ shopt -s checkwinsize
 shopt -s cmdhist
 shopt -s histappend
 
-PAGER=less
-EDITOR=nvim
-VISUAL=nvim
+export PAGER=less
+export EDITOR=nvim
+export VISUAL=nvim
+
+[ -d $HOME/.local/bin ] && export PATH="$PATH:$HOME/.local/bin"
 
 alias ls="ls -al --color=always"
 alias rm="rm -I"
